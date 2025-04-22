@@ -1,0 +1,40 @@
+<robot name="cylinder">
+<link name="cylinderbody">
+<visual>
+<origin xyz="0.012242093682289123535 -0.012362292036414146423 0.015854597166180608991" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///cylinderbody.stl"/>
+</geometry>
+<material name="cylinderbody_material">
+<color rgba="0.98039215686274505668 0.71372549019607844922 0.0039215686274509803377 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.012242093682289123535 -0.012362292036414146423 0.015854597166180608991" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///cylinderbody.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.012242093682289123535 -0.012362292036414146423 -0.029145402833819389343" rpy="0 0 0"/>
+<mass value="0.035342917352885180882" />
+<inertia ixx="2.4740042147019625734e-05" ixy="0"  ixz="0" iyy="2.4740042147019625734e-05" iyz="0" izz="1.7671458676442590112e-06" />
+</inertial>
+</link>
+
+<link name="cylinder">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="cylinder_frame" type="fixed">
+<origin xyz="0.012242093682289123535 -0.012362292036414146423 0.014854597166180608103" rpy="0 -0 0" />
+<parent link="cylinderbody" />
+<child link="cylinder" />
+<axis xyz="0 0 0"/>
+</joint>
+
+
+</robot>

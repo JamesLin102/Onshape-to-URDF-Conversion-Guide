@@ -1,0 +1,9 @@
+{
+    "onshape_api": "https://cad.onshape.com",
+    "onshape_access_key": "XXX",
+    "onshape_secret_key": "XXX",
+    "documentId": "XXX",
+    "outputFormat": "urdf",
+    "assemblyName": "Board",
+    "robotName": "board"
+}

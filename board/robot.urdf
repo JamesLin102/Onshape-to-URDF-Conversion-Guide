@@ -1,0 +1,82 @@
+<robot name="board">
+<link name="boardbody">
+<visual>
+<origin xyz="0.081545743933263109549 0.024858505384832876861 0.017741391459340151437" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///boardbody.stl"/>
+</geometry>
+<material name="boardbody_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.081545743933263109549 0.024858505384832876861 0.017741391459340151437" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///boardbody.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.081545743933263123426 0.024858505384832876861 0.0074115266103875684922" rpy="0 0 0"/>
+<mass value="0.2575256673234661009" />
+<inertia ixx="0.00014055496351511186266" ixy="0"  ixz="0" iyy="0.00041669382380242340255" iyz="0" izz="0.00053945686333047710142" />
+</inertial>
+</link>
+
+<link name="upperleft">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="upperleft_frame" type="fixed">
+<origin xyz="0.02154574393326310483 0.049858505384832885188 0.00074139145934014934886" rpy="0 -0 0" />
+<parent link="boardbody" />
+<child link="upperleft" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="lowerleft">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="lowerleft_frame" type="fixed">
+<origin xyz="0.021545743933263111769 -0.0001414946151671175878 0.00074139145934015108358" rpy="0 -0 0" />
+<parent link="boardbody" />
+<child link="lowerleft" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="upperright">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="upperright_frame" type="fixed">
+<origin xyz="0.14154574393326313508 0.049858505384832885188 0.00074139145934015108358" rpy="0 -0 0" />
+<parent link="boardbody" />
+<child link="upperright" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="lowerright">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="lowerright_frame" type="fixed">
+<origin xyz="0.14154574393326313508 -0.0001414946151671175878 0.00074139145934015108358" rpy="0 -0 0" />
+<parent link="boardbody" />
+<child link="lowerright" />
+<axis xyz="0 0 0"/>
+</joint>
+
+
+</robot>

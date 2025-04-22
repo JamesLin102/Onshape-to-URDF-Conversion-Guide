@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "27eebd6b84ba9fc7d21f0779",
+    "documentMicroversion": "9b4386f3dec6e9998b7356a0",
+    "elementId": "557e28f9ac577e12be5748ae",
+    "fullConfiguration": "default",
+    "id": "MvUxK9RMOBvWXjxfQ",
+    "isStandardContent": false,
+    "name": "cylinderBody <1>",
+    "partId": "JHD",
+    "suppressed": false,
+    "type": "Part"
+}
